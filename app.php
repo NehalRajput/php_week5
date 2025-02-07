@@ -9,6 +9,8 @@ if ($userAnswer1 == "4") {
     echo "Incorrect. The answer is 4.\n";
 }
 
+
+
 // Question 2
 echo "What is the capital of France? ";
 $userAnswer2 = trim(fgets(STDIN)); // Get user input for question 2
