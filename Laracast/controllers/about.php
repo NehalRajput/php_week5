@@ -1,5 +1,4 @@
 <?php
-require "function.php";
 $heading = "About";
 
 

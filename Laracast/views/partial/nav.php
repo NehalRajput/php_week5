@@ -8,15 +8,15 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="/Laracast/index.php" 
-         class="<?= urlIs('/Laracast/index.php') ? 'bg-gray-900 text-white ' : 'text-gray-300 '; ?> hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+              <a href="/Laracast" 
+         class="<?= urlIs('/Laracast/index') ? 'bg-gray-900 text-white ' : 'text-gray-300 '; ?> hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
 
-<a href="/Laracast/about.php" 
-   class="<?= urlIs('/Laracast/about.php') ? 'bg-gray-900 text-white ' : 'text-gray-300 '; ?> hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">About
+<a href="/Laracast/about" 
+   class="<?= urlIs('/Laracast/about') ? 'bg-gray-900 text-white ' : 'text-gray-300 '; ?> hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">About
 </a>
 
-<a href="/Laracast/contact.php" 
-   class="<?= urlIs('/Laracast/contact.php') ? 'bg-gray-900 text-white ' : 'text-gray-300 '; ?> hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+<a href="/Laracast/contact" 
+   class="<?= urlIs('/Laracast/contact') ? 'bg-gray-900 text-white ' : 'text-gray-300 '; ?> hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">
    Contact Us
 </a>
  
