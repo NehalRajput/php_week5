@@ -13,7 +13,6 @@ $routes = [
 
  function routeToControllar($uri , $routes){
 
- 
 if (array_key_exists($uri, $routes)) {
    
     require $routes[$uri];
@@ -24,12 +23,10 @@ else {
 }}
 function aboart($code =404)
 {
-    //http_response_code($code);
-
-
+   // http_response_code($code);
      require "views/{$code}.php";
 
       die();
 }
 
-  routeToControllar($uri , $routes);
+routeToControllar($uri , $routes);
