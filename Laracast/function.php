@@ -9,7 +9,7 @@ function dd($value)
  var_dump($value);
  echo "</pre>";
 
- die(); //kill the excution
+ //die(); //kill the excution
  }
 
  function urlIs($value)
@@ -18,4 +18,12 @@ function dd($value)
  }
  
 
-?>
+
+ function abort($code = 404, $message = '404 Not Found') {
+    http_response_code($code);
+
+     die($message);
+     
+ // Stop execution completely
+}
+
