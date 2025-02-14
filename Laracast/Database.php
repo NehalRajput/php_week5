@@ -17,9 +17,12 @@ class Database
     public function query($query, $params = [])
     {
         $this->statement = $this->connection->prepare($query);
+
         $this->statement->execute($params);
+
         return $this;
     }
+
 
     public function get()
     {
@@ -31,12 +34,13 @@ class Database
         return $this->statement->fetch();
     }
 
+
     public function findOrFail()
     {
         $result = $this->find();
 
-        if (!$result) {
-            abort(404);
+        if (! $result) {
+            abort();
         }
 
         return $result;

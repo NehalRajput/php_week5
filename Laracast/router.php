@@ -1,14 +1,8 @@
 <?php 
+
+$routes = require('routes.php'); 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
-
-$routes = [
-    '/Laracast' => 'controllers/index.php',
-    '/Laracast/about' => 'controllers/about.php',
-    '/Laracast/notes' => 'controllers/notes.php',
-    '/Laracast/note' => 'controllers/note.php',
-     '/Laracast/contact' => 'controllers/contact.php',
-];
 
 
 
