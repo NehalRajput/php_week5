@@ -8,11 +8,12 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="/Laracast" 
-         class="<?= urlIs('/Laracast/index') ? 'bg-gray-900 text-white ' : 'text-gray-300 '; ?> hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+              <a href="/Laracast" class="<?= urlIs('/Laracast/index') ? 'bg-gray-900 text-white ' : 'text-gray-300 '; ?> hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
 
-<a href="/Laracast/about" 
-   class="<?= urlIs('/Laracast/about') ? 'bg-gray-900 text-white ' : 'text-gray-300 '; ?> hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">About
+  <a href="/Laracast/about" 
+   class="<?= urlIs('/Laracast/about') ? 'bg-gray-900 text-white ' : 'text-gray-300 '; ?> hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">About</a>
+<a href="/Laracast/notes" 
+   class="<?= urlIs('/Laracast/notes') ? 'bg-gray-900 text-white ' : 'text-gray-300 '; ?> hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Notes
 </a>
 
 <a href="/Laracast/contact" 
