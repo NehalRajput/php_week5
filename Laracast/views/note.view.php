@@ -6,7 +6,7 @@
         <p class="mb-6">
             <a href="/Laracast/notes" class="text-blue-500 underline">go back...</a>
         </p>
-        <p><?= $note['body'] ?></p>
+        <p><?= htmlspecialchars( $note['body']) ?></p>
     </div>
 </main>
 <?php require('partial/footer.php') ?>
