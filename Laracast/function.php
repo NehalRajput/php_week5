@@ -19,11 +19,16 @@ function dd($value)
  
 
 
- function abort($code = 404, $message = '404 Not Found') {
+
+ function abort($code = 404) {
     http_response_code($code);
 
-     die($message);
-     
- // Stop execution completely
+    if ($code == 403) {
+        require "views/403.php"; 
+    } else {
+        require "views/404.php"; 
+    }
+
+    
 }
 
