@@ -28,6 +28,8 @@ function aboart($code =404)
 
 routeToControllar($uri , $routes);
 
-$routes = require('routes.php');
+//$routes = require('routes.php');
+$routes = require bash_path('routes.php');
+
 //$uri = parse_url($_SERVER['REQUEST_URI'])
 //['path'];
