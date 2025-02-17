@@ -1,5 +1,94 @@
 <?php 
 
+namespace core;
+class Router
+{
+    protected $routes = [];
+
+    public function get($uri , $controllers)
+    {
+           $this->routes[]= [
+             
+            'uri'=> $uri,
+            'controllers'=>$controllers,
+             'method'=>'GET'
+
+              
+           ];
+    } 
+    public function post($uri , $controllers)
+    {
+        $this->routes[]= [
+             
+            'uri'=> $uri,
+            'controllers'=>$controllers,
+             'method'=>'POST'
+
+              
+           ];
+    }
+    public function delete($uri , $controllers)
+    { 
+        $this->routes[]= [
+             
+            'uri'=> $uri,
+            'controllers'=>$controllers,
+             'method'=>'DELETE'
+
+              
+           ];
+      
+    }
+    public function patch($uri , $controllers)
+    {
+        $this->routes[]= [
+             
+            'uri'=> $uri,
+            'controllers'=>$controllers,
+             'method'=>'PATCH'
+
+              
+           ];
+    }
+    public function put($uri , $controllers)
+    {
+        $this->routes[]= [
+             
+            'uri'=> $uri,
+            'controllers'=>$controllers,
+             'method'=>'PUT'
+
+              
+           ];
+    }
+
+    public function route($uri , $method)
+    {
+         foreach($this->routes as $route)
+         {
+            if($route['uri']===$uri && $route['method']=== strtoupper($method))
+            {
+                return require bash_path($route['controllers']);
+
+            }
+         }
+
+       //  $this->abort();
+    }
+   protected function aboart($code =404)
+{
+   // http_response_code($code);
+     require bash_path("views/{$code}.php");
+
+      die();
+}
+
+}
+
+
+
+
+/*
 $routes = require bash_path('routes.php'); 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
@@ -26,10 +115,5 @@ function aboart($code =404)
       die();
 }
 
-routeToControllar($uri , $routes);
-
+*/
 //$routes = require('routes.php');
-$routes = require bash_path('routes.php');
-
-//$uri = parse_url($_SERVER['REQUEST_URI'])
-//['path'];
