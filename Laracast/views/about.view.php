@@ -1,13 +1,13 @@
 <?php
-      require "views/partial/head.php";  
+      require bash_path("views/partial/head.php");  
     ?>
 <?php
-      require "views/partial/nav.php";  
+      require bash_path("views/partial/nav.php");  
     ?>
  
  
  <?php
-      require "views/partial/banner.php";  
+      require bash_path("views/partial/banner.php");  
     ?>
 
  
@@ -17,5 +17,5 @@
     </div>
   </main>
   <?php
-      require "views/partial/footer.php";  
+      require bash_path("views/partial/footer.php");  
     ?>

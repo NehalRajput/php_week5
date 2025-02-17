@@ -1,5 +1,8 @@
 <?php
 
+
+//echo 'HELLO THERE';
+
 return [
     'database' => [
         'host' => 'localhost',

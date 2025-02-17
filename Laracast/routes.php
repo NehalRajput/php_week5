@@ -1,11 +1,10 @@
 <?php
 
 return[
-    '/Laracast' => 'controllers/index.php',
-    '/Laracast/about' => 'controllers/about.php',
-    '/Laracast/notes' => 'controllers/notes/index.php',
-    '/Laracast/note' => 'controllers/notes/show.php',
-    '/Laracast/notes/create'=>'controllers/notes/create.php',
-     '/Laracast/contact' => 'controllers/contact.php',
+    '/' => 'controllers/index.php',
+    '/about' => 'controllers/about.php',
+    '/notes' => 'controllers/notes/index.php',
+    '/note' => 'controllers/notes/show.php',
+    '/notes/create'=>'controllers/notes/create.php',
+     '/contact' => 'controllers/contact.php',
 ];
-

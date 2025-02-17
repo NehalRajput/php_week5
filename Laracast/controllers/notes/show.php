@@ -1,7 +1,6 @@
 <?php
-$config = require('config.php');
+$config = require bash_path('config.php');
 $db = new Database($config['database']);
-$heading = 'Note';
 $currentUserId = 1;
 
 $note = $db->query('select * from notes where  id = :id', [ 'id' => $_GET['id']
@@ -14,4 +13,9 @@ $note = $db->query('select * from notes where  id = :id', [ 'id' => $_GET['id']
 
     //dd($note);
 
-require "views/notes/show.view.php";
+
+    require view("notes/show.view.php",
+    [
+        'heading'=>'Note',
+        'note'=> $note
+    ]);

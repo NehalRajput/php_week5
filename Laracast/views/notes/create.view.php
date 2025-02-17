@@ -1,6 +1,6 @@
-<?php require('views/partial/head.php') ?>
-<?php require('views/partial/nav.php') ?>
-<?php require('views/partial/banner.php') ?>
+<?php require bash_path('views/partial/head.php') ?>
+<?php require bash_path('views/partial/nav.php') ?>
+<?php require bash_path('views/partial/banner.php') ?>
 
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
@@ -40,5 +40,4 @@
         </div>
     </div>
 </main>
-
-<?php require('views/partial/footer.php') ?>
+<?php require bash_path('views/partial/footer.php') ?>
