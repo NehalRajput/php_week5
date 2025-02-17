@@ -14,4 +14,4 @@ $note = $db->query('select * from notes where  id = :id', [ 'id' => $_GET['id']
 
     //dd($note);
 
-require "views/note.view.php";
+require "views/notes/show.view.php";
