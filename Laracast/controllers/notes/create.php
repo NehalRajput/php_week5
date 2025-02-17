@@ -1,6 +1,10 @@
 <?php
 
 
+use core\Database;
+use core\validator;
+
+
 require bash_path('validator.php');
 
 //$config = require('config.php');

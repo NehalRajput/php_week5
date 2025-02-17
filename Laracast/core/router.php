@@ -1,6 +1,6 @@
 <?php 
 
-$routes = require('routes.php'); 
+$routes = require bash_path('routes.php'); 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 
@@ -21,7 +21,7 @@ function routeToControllar($uri, $routes) {
 function aboart($code =404)
 {
    // http_response_code($code);
-     require "views/{$code}.php";
+     require bash_path("views/{$code}.php");
 
       die();
 }

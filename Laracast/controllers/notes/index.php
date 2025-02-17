@@ -1,5 +1,6 @@
 <?php
 
+use core\Database;
 
 $config = require bash_path('config.php');
 $db = new Database($config['database']);
