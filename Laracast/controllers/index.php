@@ -1,19 +1,11 @@
 <?php
 
 
-
- //$heading = "Home";
- 
+$_SESSION['name'] = 'Nehal';
 
 
- 
- //echo $_SERVER['REQUEST_URL'] ==='/' ? 'bg-gray-900 text-white': 'text-gray-300';
-
-
-
- require view("index.view.php",
+  view("index.view.php",
 [
-    'heading'=>'Home'
+    'heading'=>'Home',
 ]);
  
-?>
