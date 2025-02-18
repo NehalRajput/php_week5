@@ -27,4 +27,9 @@ $router->get('/notes/create', 'controllers/notes/create.php');
 $router->post('/notes/create', 'controllers/notes/store.php');
 
 
+$router->get('/register','controllers/registration/create.php');
+$router->post('/register','controllers/registration/store.php');
+
+
+
 //dd($router->routes);
