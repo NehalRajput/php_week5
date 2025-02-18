@@ -16,12 +16,10 @@ function urlIs($value)
 function abort($code = 404)
 {
     http_response_code($code);
-    if ($code == 403) {
-        require BASE_PATH . "views/403.php";
-    } else {
-        require BASE_PATH . "views/404.php";
-    }
-    exit(); // Stop script execution
+        require BASE_PATH . "views/{$code}.php";
+    
+        die();
+        // Stop script execution
 }
 
 function authorize($condition, $status = 403) {
