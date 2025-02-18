@@ -4,8 +4,10 @@
 use core\Database;
 use core\Validator;
 
-$config = require bash_path('config.php');
-$db = new Database($config['database']);
+use core\App;
+
+
+$db= App::resolve(Database::class);
 
 $errors = [];
 

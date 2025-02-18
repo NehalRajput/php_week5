@@ -11,6 +11,9 @@ spl_autoload_register(function ($class) {
 
 });
 
+require bash_path('bootstrap.php');
+
+
 $router=new \core\Router();
 //require bash_path('core/router.php');
 

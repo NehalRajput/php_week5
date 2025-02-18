@@ -1,9 +1,10 @@
 <?php
+
+use core\App;
 use core\Database;
 
+$db= App::resolve(Database::class);
 
-$config = require bash_path('config.php');
-$db = new Database($config['database']);
 $currentUserId = 1;
 
   
