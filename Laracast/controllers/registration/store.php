@@ -59,13 +59,13 @@ $user =$db->query('select * from users where email = :email',[
          $db->query('INSERT INTO users(email, password)VALUES(:email , :password)',[
 
          'email' =>$email,
-         'password'=> $password
+         'password'=>password_hash($password, PASSWORD_BCRYPT)
 
          ]);
 
          //marked that the user has logged in.
 
-         $_SESSION['logged_in'] = true;
+        // $_SESSION['logged_in'] = true;
 
          $_SESSION['user'] = [
 
