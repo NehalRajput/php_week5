@@ -16,13 +16,14 @@ function urlIs($value)
 function abort($code = 404)
 {
     http_response_code($code);
-        require BASE_PATH . "views/{$code}.php";
-    
-        die();
-        // Stop script execution
+    require BASE_PATH . "views/{$code}.php";
+
+    die();
+    // Stop script execution
 }
 
-function authorize($condition, $status = 403) {
+function authorize($condition, $status = 403)
+{
     if (! $condition) {
         abort($status);
     }
@@ -30,7 +31,7 @@ function authorize($condition, $status = 403) {
 
 function bash_path($path)
 {
-    
+
     return BASE_PATH . $path;
 }
 
@@ -38,4 +39,27 @@ function view($path, $attributes = [])
 {
     extract($attributes);
     require BASE_PATH . 'views/' . $path;
+}
+
+function login($user)
+{
+
+    $_SESSION['user'] = [
+
+        'email' => $user['email']
+    ];
+
+    session_regenerate_id(true);
+}
+function logout()
+{
+    $_SESSION = [];
+
+    session_destroy();
+
+    $params = session_get_cookie_params();
+    setcookie('PHPSESSID', '', time() - 3600, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
+
+    header("Location: /login"); // Redirect to login page after logout
+    exit();
 }

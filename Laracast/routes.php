@@ -10,8 +10,8 @@
 //];
 
 $router->get('/' , 'controllers/index.php');
-$router->get('/about' , 'controllers/about.php');
-$router->get('/contact' , 'controllers/contact.php');
+$router->get('/about', 'controllers/about.php');
+$router->get('/contact', 'controllers/contact.php');
 
 
 $router->get('/notes', 'controllers/notes/index.php')->only('auth');
@@ -28,7 +28,14 @@ $router->post('/notes/create', 'controllers/notes/store.php');
 
 
 $router->get('/register','controllers/registration/create.php')->only('guest');
-$router->post('/register','controllers/registration/store.php');
+$router->post('/register','controllers/registration/store.php')->only('guest');
+
+$router->get('/login','controllers/session/create.php')->only('guest');
+$router->post('/session','controllers/session/store.php')->only('guest');
+
+$router->delete('/session', 'controllers/session/destroy.php')->only('auth');
+
+
 
 
 

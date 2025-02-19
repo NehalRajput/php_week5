@@ -4,6 +4,8 @@ use core\validator;
 use core\App;
 use core\Database;
 
+$db = App::resolve(Database::class);
+
 
 $email = $_POST['email'];
 $password = $_POST['password'];
@@ -65,13 +67,8 @@ $user =$db->query('select * from users where email = :email',[
 
          //marked that the user has logged in.
 
-        // $_SESSION['logged_in'] = true;
-
-         $_SESSION['user'] = [
-
-            'email'=> $email
-
-         ];
+    
+        login($user);
 
          header('location:/');
          exit();

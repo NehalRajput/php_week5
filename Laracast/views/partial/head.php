@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 
 </head>
-<body class="h-full">
+<body class="mt-0">
 
 
 <div class="min-h-full">
