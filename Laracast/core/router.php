@@ -68,7 +68,7 @@ class Router
 
 
 
-                return require bash_path($route['controller']);
+                return require bash_path('Http/controllers/'.$route['controller']);
             }
         }
 
