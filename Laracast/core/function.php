@@ -41,25 +41,9 @@ function view($path, $attributes = [])
     require BASE_PATH . 'views/' . $path;
 }
 
-function login($user)
+function redirect($path)
 {
-
-    $_SESSION['user'] = [
-
-        'email' => $user['email']
-    ];
-
-    session_regenerate_id(true);
-}
-function logout()
-{
-    $_SESSION = [];
-
-    session_destroy();
-
-    $params = session_get_cookie_params();
-    setcookie('PHPSESSID', '', time() - 3600, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
-
-    header("Location: /login"); // Redirect to login page after logout
+    header("location:{$path}");
     exit();
+
 }
