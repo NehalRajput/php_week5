@@ -2,6 +2,7 @@
 
 
 use core\Session;
+use core\ValidationException;
 
 session_start();
 
@@ -30,7 +31,22 @@ $routes = require bash_path('routes.php');
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 $method = $_POST['_method']?? $_SERVER['REQUEST_METHOD'];
-$router->route($uri ,$method); 
+try{
+   $router->route($uri ,$method); 
+
+}catch(ValidationException $exception )
+{
+
+ // dd($_SERVER);
+    
+  Session::flash('errors', $exception->errors);
+ 
+  Session::flash('old',
+     $exception->old);
+  
+
+  return redirect($router->previousUrl());
+}
 
 Session::unflash();
 
