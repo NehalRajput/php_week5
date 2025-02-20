@@ -1,0 +1,24 @@
+{
+    "name": "lenovo/laracast",
+    "autoload": {
+        "psr-4": {
+            "Lenovo\\Laracast\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "NehalRajput",
+            "email": "nehal17.ast@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+
+        "psr-4": {
+            "core\\": "core/",
+            "Http\\": "Http"
+
+        }
+
+    }
+}

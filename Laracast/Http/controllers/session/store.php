@@ -24,6 +24,5 @@ if ($signedIn){
    
 }
 
-
 redirect('/');
 
