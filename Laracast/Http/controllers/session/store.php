@@ -4,9 +4,6 @@ use core\Authenticate;
 use Http\Forms\LoginForm;
 use core\Session;
 
-
-//var_dump('i have been posted');
-
 $email = $_POST['email'];
 $password = $_POST['password'];
 
