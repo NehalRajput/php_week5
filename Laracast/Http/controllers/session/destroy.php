@@ -2,7 +2,7 @@
 
 //log the user out.
 
-logout();
+//logout();
 header('location:/');
 exit();
 

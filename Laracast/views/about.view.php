@@ -1,14 +1,9 @@
 <?php
-      require bash_path("views/partial/head.php");  
-    ?>
-<?php
-      require bash_path("views/partial/nav.php");  
-    ?>
- 
- 
- <?php
-      require bash_path("views/partial/banner.php");  
-    ?>
+    require bash_path("views/partial/head.php");
+    require bash_path("views/partial/nav.php");
+    require bash_path("views/partial/banner.php");
+    require bash_path("views/partial/footer.php");
+?>    
 
  
   <main>
